@@ -1,4 +1,7 @@
-h3{color: red;}
-h3{color: blues;}
+h1{color: red;}
+h2{color: blues;}
 h3{color: yellow;}
+h3:hover{color: blue;}
 p{color: green;}
+.alcoolicas { color: purple; }
+#horarios { color: orange; }
