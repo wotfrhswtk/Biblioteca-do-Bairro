@@ -27,7 +27,8 @@ h1 {
 
 nav {
     display: flex;
-    gap: 20px;
+    gap: 1rem;
+    align-items: center;
 }
 
 nav a {
@@ -60,61 +61,95 @@ section {
     font-weight: bold;
 }
 
+
 .etiqueta {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #E07A5F;
 }
 
-/* Catálogo */
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais */
+    gap: 15px; /* Espaço entre os blocos */
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
 
-#catalogo {
-    width: auto;
-    padding: 20px;
-    margin: 0;
-    background-color: white;
-    border-left: 6px solid #E07A5F;
+/* Estilo geral para todos os artigos */
+#galeria article {
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-    text-align: left;
-    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 160px;
+    cursor:pointer;
 }
 
-#catalogo article {
-    background-color: transparent;
-    color: #23395B;
-    padding: 0;
-    border-radius: 0;
-    margin: 0;
+#galeria article h3 {
+    font-size: 1.1rem;
 }
 
-#catalogo article:hover {
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 0;
-    margin: 0;
+/* 1. O Principezinho (Ocupa 2 colunas) */
+#catalogo1 {
+    grid-column: span 2; 
+    background-color: #22384c; /* Azul escuro */
+    color: #ffffff;
+    min-height: 200px;
 }
 
-#catalogo h2 {
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
+#catalogo1 h2 {
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #C85C42;
-    margin: 0 0 5px;
+    letter-spacing: 1px;
+    color: #e5c185; /* Tom dourado */
+    margin-bottom: 8px;
 }
 
-#catalogo h3 {
-    font-family: "Lora", Georgia, serif;
-    font-size: 1.5rem;
-    margin: 0 0 5px;
+#catalogo1:hover{
+transform: scale(1.05);   
 }
 
-#catalogo p {
-    font-size: 1rem;
-    color: #625F78;
-    margin: 0;
+/* 2. Ensaio sobre a Cegueira */
+#catalogo2 {
+    background-color: #d87654; /* Laranja / Coral */
+    color: #ffffff;
+}
+
+#catalogo2:hover{
+transform: scale(1.05);   
+}
+
+/* 3. Os Maias */
+#catalogo3 {
+    background-color: #e8c68c; /* Amarelo / Areia */
+    color: #222222;
+}
+
+#catalogo3:hover{
+transform: scale(1.05);   
+}
+
+/* 4. Mensagem */
+#catalogo4 {
+    background-color: #789c83; /* Verde seco */
+    color: #ffffff;
+}
+
+#catalogo4:hover{
+transform: scale(1.05);   
+}
+
+/* 5. A Cidade e as Serras */
+#catalogo5 {
+    background-color: #b3c5d5; /* Azul claro acinzentado */
+    color: #222222;
+}
+
+#catalogo5:hover{
+transform: scale(1.05);   
 }
 
 /* Cartões */
@@ -171,35 +206,100 @@ box-sizing: border-box;
     margin:20px;
 }
 
-.button{
+
+
+.button {
+    display: inline-block;
     margin: 20px;
-    background-position: center;
-}
-
-.button nav {
-    display: flex;
-    gap: 20px;
-    margin: 0 auto;
-}
-
-.button nav a {
+    padding: 10px 20px;
+    background: #A84B33;
     color: white;
     text-decoration: none;
-    font-size: 0.5 rem;
-    font-weight: bold;
-    padding:0.5rem;
-    background-color: #23395B;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.button nav a:hover {
-    padding: 0.5rem;
-    background-color:black;
     border-radius: 5px;
+    cursor: pointer;
+
 }
 
-img{
-    border-radius: 10px;
+
+
+.button:hover {
+    background: #873A28;
+}
+
+.Button:focus-visible{
+outline: 3px solid #23395B;
+outline-offset: 3px;
+}
+
+.button:active{
+    transform: translateY(2px);
+}
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  transform: translate(33%,150%);
+}
+
+div.gallery-item {
+  margin: 5px;
+  border: none;
+  width: 180px;
+}
+
+div.gallery-item:hover {
+  border: 1px solid #777;
+}
+
+div.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 100px;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+#cartoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.1rem;
+}
+
+.cartao1 {
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  width: 270px;
+  text-align: left;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #E5DED3;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0.2s ease;
+  font-display: auto;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.cartao1:hover {
+    transform: scale(1.05);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgb(0 0 0 / 0.15);
+    background-color: pink;
+}
+
+.coluna1, .coluna2, .coluna3 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
 }
