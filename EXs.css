@@ -60,14 +60,6 @@ section {
     font-weight: bold;
 }
 
-/* Títulos */
-
-h2 {
-    font-size: 2rem;
-    font-family: "Lora", Georgia, serif;
-    color: rgb(208, 92, 92);
-}
-
 .etiqueta {
     text-transform: uppercase;
     letter-spacing: 2px;
